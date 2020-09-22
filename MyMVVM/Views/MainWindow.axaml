@@ -11,7 +11,13 @@
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="35"/>
+      </Grid.RowDefinitions>
+      <DockPanel Grid.Row="0" LastChildFill="True">        
+        <TextBlock Grid.Column="0" Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
+        <TextBox Text="" Margin="5"/>
+      </DockPanel>
+    </Grid>
 </Window>
